@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LearnSmart - Online Education</title>
+  <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Welcome to LearnSmart</h1>
+    <p>Your gateway to better learning</p>
+  </header>
+
+  <section>
+    <h2>Subjects We Offer</h2>
+    <div class="subjects">
+      <div class="subject">Mathematics</div>
+      <div class="subject">Science</div>
+      <div class="subject">History</div>
+      <div class="subject">English</div>
+      <div class="subject">Computer Science</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="4" placeholder="Your Message"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 LearnSmart Education. All rights reserved.
+  </footer>
+
+
+  <script type="module">
+	import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+	createChat({
+	webhookUrl: 'https://abesade.app.n8n.cloud/webhook/cd10ddfc-129f-49a3-9d2b-e73f20e28f84/chat',
+	webhookConfig: {
+		method: 'POST',
+		headers: {}
+	},
+	target: '#n8n-chat',
+	mode: 'window',
+	chatInputKey: 'chatInput',
+	chatSessionKey: 'sessionId',
+	metadata: {},
+	showWelcomeScreen: false,
+	defaultLanguage: 'en',
+	initialMessages: [
+		'Hi there! 👋',
+	],
+	i18n: {
+		en: {
+			title: 'Customer Support',
+			subtitle: "",
+			footer: '',
+			getStarted: 'New Conversation',
+			inputPlaceholder: 'Type your question..',
+		},
+	},
+});
+</script>
+</body>
+</html>
